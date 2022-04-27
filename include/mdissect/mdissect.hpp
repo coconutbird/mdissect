@@ -1,8 +1,6 @@
 #ifndef MEMORY_MONO_HPP_
 #define MEMORY_MONO_HPP_
 
-#include "offsets.hpp"
-
 #include <iostream>
 #include <vector>
 #include <functional>
