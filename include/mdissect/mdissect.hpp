@@ -15,6 +15,7 @@ namespace mdissect {
     struct mono_class;
 
     struct mono_vtable {
+        mono_vtable() = default;
         explicit mono_vtable(uint64_t address) : address(address) {};
 
         uint64_t address;
@@ -29,6 +30,7 @@ namespace mdissect {
     struct mono_class;
 
     struct mono_image {
+        mono_image() = default;
         explicit mono_image(uint64_t address) : address(address) {};
 
         uint64_t address;
@@ -40,6 +42,7 @@ namespace mdissect {
     };
 
     struct mono_assembly {
+        mono_assembly() = default;
         explicit mono_assembly(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -50,6 +53,7 @@ namespace mdissect {
     };
 
     struct mono_domain {
+        mono_domain() = default;
         explicit mono_domain(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -68,6 +72,7 @@ namespace mdissect {
     };
 
     struct mono_method {
+        mono_method() = default;
         explicit mono_method(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -76,6 +81,7 @@ namespace mdissect {
     };
 
     struct mono_type {
+        mono_type() = default;
         explicit mono_type(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -89,6 +95,7 @@ namespace mdissect {
     };
 
     struct mono_field {
+        mono_field() = default;
         explicit mono_field(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -102,6 +109,7 @@ namespace mdissect {
     };
 
     struct mono_class {
+        mono_class() = default;
         explicit mono_class(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -126,6 +134,7 @@ namespace mdissect {
     };
 
     struct mono_object {
+        mono_object() = default;
         explicit mono_object(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -134,6 +143,7 @@ namespace mdissect {
     };
 
     struct mono {
+        mono() = default;
         explicit mono(uint64_t address) : address(address) {}
 
         uint64_t address;
@@ -142,6 +152,7 @@ namespace mdissect {
     };
 
     struct mono_hash_table {
+        mono_hash_table() = default;
         explicit mono_hash_table(uint64_t address);
 
         uint64_t address;
