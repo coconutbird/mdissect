@@ -206,6 +206,8 @@ namespace mdissect {
     std::vector<mono_method> mono_class::methods() const {
         const auto method_count = read<uint32_t>(address + offsets::MonoClassDefMethodCount);
         const auto methods = read<uint64_t>(address + offsets::MonoClassMethods);
+        if (methods == 0)
+            return {};
 
         std::vector<mono_method> result;
         result.reserve(method_count);
@@ -219,6 +221,9 @@ namespace mdissect {
     mono_method mono_class::get_method(fn_match_method_callback callback) const {
         const auto method_count = read<uint32_t>(address + offsets::MonoClassDefMethodCount);
         const auto methods = read<uint64_t>(address + offsets::MonoClassMethods);
+        if (methods == 0)
+            return mono_method(0);
+
         for (uint32_t i = 0; i < method_count; ++i) {
             const auto mono_method = mdissect::mono_method(read<uint64_t>(methods + i * 0x8));
             if (callback(mono_method))
