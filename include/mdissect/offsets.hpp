@@ -19,6 +19,7 @@ namespace offsets {
     // _MonoClass
     constexpr int32_t MonoClassParent = 0x30;
     constexpr int32_t MonoClassName = 0x48;
+    constexpr int32_t MonoClassTypeToken = 0x58;
     constexpr int32_t MonoClassVTableSize = 0x5C;
     constexpr int32_t MonoClassFields = 0x98;
     constexpr int32_t MonoClassMethods = 0xA0;

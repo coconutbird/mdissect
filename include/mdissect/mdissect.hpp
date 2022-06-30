@@ -118,6 +118,8 @@ namespace mdissect {
 
         std::string name() const;
 
+        int32_t token() const;
+
         std::vector<mono_field> fields() const;
 
         using fn_match_field_callback = std::function<bool(mono_field)>;

@@ -178,6 +178,10 @@ namespace mdissect {
         return name;
     }
 
+    int32_t mono_class::token() const {
+        return read<int32_t>(address + offsets::MonoClassTypeToken);
+    }
+
     std::vector<mono_field> mono_class::fields() const {
         const auto fields = read<uint64_t>(address + offsets::MonoClassFields);
         const auto field_count = read<int32_t>(address + offsets::MonoClassDefFieldCount);
